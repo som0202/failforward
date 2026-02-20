@@ -1,15 +1,57 @@
-# Installation
-> `npm install --save @types/node`
+# Autoprefixer [![Cult Of Martians][cult-img]][cult]
 
-# Summary
-This package contains type definitions for node (https://nodejs.org/).
+<img align="right" width="94" height="71"
+     src="https://postcss.github.io/autoprefixer/logo.svg"
+     title="Autoprefixer logo by Anton Lovchikov">
 
-# Details
-Files were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node/v22.
+[PostCSS] plugin to parse CSS and add vendor prefixes to CSS rules using values
+from [Can I Use]. It is recommended by Google and used in Twitter and Alibaba.
 
-### Additional Details
- * Last updated: Sun, 14 Dec 2025 00:04:32 GMT
- * Dependencies: [undici-types](https://npmjs.com/package/undici-types)
+Write your CSS rules without vendor prefixes (in fact, forget about them
+entirely):
 
-# Credits
-These definitions were written by [Microsoft TypeScript](https://github.com/Microsoft), [Alberto Schiabel](https://github.com/jkomyno), [Andrew Makarov](https://github.com/r3nya), [Benjamin Toueg](https://github.com/btoueg), [David Junger](https://github.com/touffy), [Mohsen Azimi](https://github.com/mohsen1), [Nikita Galkin](https://github.com/galkin), [Sebastian Silbermann](https://github.com/eps1lon), [Wilco Bakker](https://github.com/WilcoBakker), [Marcin Kopacz](https://github.com/chyzwar), [Trivikram Kamat](https://github.com/trivikr), [Junxiao Shi](https://github.com/yoursunny), [Ilia Baryshnikov](https://github.com/qwelias), [ExE Boss](https://github.com/ExE-Boss), [Piotr Błażejewicz](https://github.com/peterblazejewicz), [Anna Henningsen](https://github.com/addaleax), [Victor Perin](https://github.com/victorperin), [NodeJS Contributors](https://github.com/NodeJS), [Linus Unnebäck](https://github.com/LinusU), [wafuwafu13](https://github.com/wafuwafu13), [Matteo Collina](https://github.com/mcollina), [Dmitry Semigradsky](https://github.com/Semigradsky), and [René](https://github.com/Renegade334).
+```css
+::placeholder {
+  color: gray;
+}
+
+.image {
+  width: stretch;
+}
+```
+
+Autoprefixer will use the data based on current browser popularity and property
+support to apply prefixes for you. You can try the [interactive demo]
+of Autoprefixer.
+
+```css
+::-moz-placeholder {
+  color: gray;
+}
+::placeholder {
+  color: gray;
+}
+
+.image {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+}
+```
+
+Twitter account for news and releases: [@autoprefixer].
+
+<a href="https://evilmartians.com/?utm_source=autoprefixer">
+<img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg" alt="Sponsored by Evil Martians" width="236" height="54">
+</a>
+
+[interactive demo]: https://autoprefixer.github.io/
+[@autoprefixer]:    https://twitter.com/autoprefixer
+[Can I Use]:        https://caniuse.com/
+[cult-img]:         https://cultofmartians.com/assets/badges/badge.svg
+[PostCSS]:          https://github.com/postcss/postcss
+[cult]:             https://cultofmartians.com/tasks/autoprefixer-grid.html
+
+
+## Docs
+Read full docs **[here](https://github.com/postcss/autoprefixer#readme)**.
